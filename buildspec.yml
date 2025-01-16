@@ -14,8 +14,8 @@ phases:
         commands:
             - echo "we are in the build block"
             - echo "we will run some tests"
-            - chmod +x install_zabbix_agent.sh
-            - ./install_zabbix_agent.sh
+            - chmod +x /.platform/hooks/prebuild/install_zabbix_agent.sh
+            - ./.platform/hooks/prebuild/install_zabbix_agent.sh
             - grep -Fq "Congratulations" index.html
     post_build:
         commands:
