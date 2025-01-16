@@ -9,8 +9,8 @@ ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf"
 sudo yum update -y
 
 # Install the Zabbix agent
-sudo yum -Uvh https://repo.zabbix.com/zabbix/7.0/amazonlinux/2023/x86_64/zabbix-release-latest-7.0.amzn2023.noarch.rpm
-sudo yum install -y zabbix-agent
+sudo rpm -Uvh https://repo.zabbix.com/zabbix/7.0/amazonlinux/2023/x86_64/zabbix-release-latest-7.0.amzn2023.noarch.rpm
+sudo dnf install -y zabbix-agent
 
 # Configure the agent
 sudo sed -i "s/^Server=127.0.0.1/Server=$ZABBIX_SERVER_IP/" $ZABBIX_AGENT_CONF
