@@ -10,7 +10,7 @@ sudo dnf upgrade -y
 
 # Install the Zabbix agent
 echo "Installing Zabbix agent..."
-sudo rpm -Uvh https://repo.zabbix.com/zabbix/7.0/amazonlinux/2023/x86_64/zabbix-release-latest-7.0.amzn2023.noarch.rpm --exclude=zabbix-tools
+sudo rpm -Uvh https://repo.zabbix.com/zabbix/7.0/amazonlinux/2023/x86_64/zabbix-release-latest-7.0.amzn2023.noarch.rpm
 sudo dnf install -y zabbix-agent --exclude=zabbix-tools
 
 # Configure the agent
