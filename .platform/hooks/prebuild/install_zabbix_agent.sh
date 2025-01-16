@@ -2,7 +2,7 @@
 set -e
 
 # Variables
-ZABBIX_SERVER_IP="x.x.x.x"
+ZABBIX_SERVER_IP="172.31.30.203"
 ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf"
 
 # Update packages
