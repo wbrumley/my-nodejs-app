@@ -18,4 +18,5 @@ sudo sed -i "s/^ServerActive=127.0.0.1/ServerActive=$ZABBIX_SERVER_IP/" $ZABBIX_
 sed -i "s/^Hostname=Zabbix server/Hostname=hostname/" $ZABBIX_AGENT_CONF
 
 # Manually start the Zabbix agent
-zabbix_agentd -c /etc/zabbix/zabbix_agentd.conf
+sudo systemctl enable zabbix-agent
+sudo systemctl start zabbix-agent
