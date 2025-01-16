@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /install_zabbix_agent.sh
+    destination: /tmp/install_zabbix_agent.sh
+hooks:
+  AfterInstall:
+    - location: /tmp/install_zabbix_agent.sh
+      timeout: 180
+      runas: root
