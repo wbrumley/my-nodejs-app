@@ -6,7 +6,7 @@ ZABBIX_SERVER_IP="x.x.x.x"
 ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf"
 
 # Update packages
-sudo dnf update -y
+sudo dnf upgrade -y
 
 # Install the Zabbix agent
 sudo rpm -Uvh https://repo.zabbix.com/zabbix/7.0/amazonlinux/2023/x86_64/zabbix-release-latest-7.0.amzn2023.noarch.rpm
