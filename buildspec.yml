@@ -4,7 +4,7 @@ phases:
     install:
         runtime-versions:
             nodejs: latest
-            python: 3.9
+            python: latest
         commands:
             - echo "installing something"
     pre_build:
