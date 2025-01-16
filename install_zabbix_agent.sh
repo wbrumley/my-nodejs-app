@@ -17,5 +17,5 @@ sudo sed -i "s/^Server=127.0.0.1/Server=$ZABBIX_SERVER_IP/" $ZABBIX_AGENT_CONF
 sudo sed -i "s/^ServerActive=127.0.0.1/ServerActive=$ZABBIX_SERVER_IP/" $ZABBIX_AGENT_CONF
 
 # Start and enable the Zabbix agent
-sudo systemctl restart zabbix-agent
-sudo systemctl enable zabbix-agent
+sudo service zabbix-agent start
+sudo service enable zabbix-agent
