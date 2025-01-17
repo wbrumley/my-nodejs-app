@@ -2,9 +2,9 @@
 set -e
 
 # Access environment variables from Elastic Beanstalk
-ZABBIX_SERVER_IP=${ZABBIX_SERVER_IP}
-ZABBIX_AGENT_CONF=${ZABBIX_AGENT_CONF}
-ZABBIX_AGENT_VERSION=${ZABBIX_AGENT_VERSION}
+export ZABBIX_SERVER_IP=${ZABBIX_SERVER_IP}
+export ZABBIX_AGENT_CONF=${ZABBIX_AGENT_CONF}
+export ZABBIX_AGENT_VERSION=${ZABBIX_AGENT_VERSION}
 
 # Update packages
 sudo dnf upgrade -y 
