@@ -2,9 +2,9 @@
 set -e
 
 # Access environment variables from Elastic Beanstalk
-export ZABBIX_SERVER_IP=${ZABBIX_SERVER_IP}
-export ZABBIX_AGENT_CONF=${ZABBIX_AGENT_CONF}
-export ZABBIX_AGENT_VERSION=${ZABBIX_AGENT_VERSION}
+ZABBIX_SERVER_IP=$(get-config environment --key ZABBIX_SERVER_IP)
+ZABBIX_AGENT_CONF=$(get-config environment --key ZABBIX_AGENT_CONF)
+ZABBIX_AGENT_VERSION=$(get-config environment --key ZABBIX_AGENT_VERSION)
 
 # Check if the environment variables are set
 echo "Checking if environment variables are set:"
