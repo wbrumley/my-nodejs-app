@@ -6,6 +6,12 @@ export ZABBIX_SERVER_IP=${ZABBIX_SERVER_IP}
 export ZABBIX_AGENT_CONF=${ZABBIX_AGENT_CONF}
 export ZABBIX_AGENT_VERSION=${ZABBIX_AGENT_VERSION}
 
+# Check if the environment variables are set
+echo "Checking if environment variables are set:"
+echo "ZABBIX_SERVER_IP: $ZABBIX_SERVER_IP"
+echo "ZABBIX_AGENT_CONF: $ZABBIX_AGENT_CONF"
+echo "ZABBIX_AGENT_VERSION: $ZABBIX_AGENT_VERSION"
+
 # Update packages
 sudo dnf upgrade -y 
 
