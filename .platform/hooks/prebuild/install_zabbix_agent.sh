@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
 
-# Variables
-ZABBIX_SERVER_IP="172.31.30.203" # Private IP (if on same VPC), public IP, or domain name of Zabbix monitoring server
-ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf"
+# Access environment variables from Elastic Beanstalk
+ZABBIX_SERVER_IP=${ZABBIX_SERVER_IP}
+ZABBIX_AGENT_CONF=${ZABBIX_AGENT_CONF}
+ZABBIX_AGENT_VERSION=${ZABBIX_AGENT_VERSION}
 
 # Update packages
 sudo dnf upgrade -y 
@@ -15,7 +16,7 @@ then
     exit 0  # Exit the script as Zabbix is already running
 else
     # Install the Zabbix agent
-    sudo rpm -Uvh https://repo.zabbix.com/zabbix/7.0/amazonlinux/2023/x86_64/zabbix-release-latest-7.0.amzn2023.noarch.rpm
+    sudo rpm -Uvh $ZABBIX_AGENT_VERSION
     sudo dnf install -y zabbix-agent --exclude=zabbix-tools
 
     # Configure the agent
@@ -25,5 +26,4 @@ else
 
     # Start the Zabbix agent
     sudo /usr/sbin/zabbix_agentd
-
 fi
