@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Access environment variables from Elastic Beanstalk
+# Access environment variables from env file
 source .env
 
 # Check if the environment variables are set
