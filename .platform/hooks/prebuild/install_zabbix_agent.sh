@@ -2,7 +2,7 @@
 set -e
 
 # Variables
-ZABBIX_SERVER_IP="172.31.30.203" # Private IP, public IP, or domain name of Zabbix monitoring server
+ZABBIX_SERVER_IP="172.31.30.203" # Private IP (if on same VPC), public IP, or domain name of Zabbix monitoring server
 ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf"
 
 # Update packages
